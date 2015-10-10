@@ -44,4 +44,32 @@ public class Emploee {
     public void emploeerWorks(){
         System.out.println("I'm working");
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        //non null
+        if (obj == null) {
+            return false;
+        }
+        //reflectivity
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof Coder)) {
+            return false;
+        }
+        //this feald eq to obj fielads
+        Coder other = (Coder) obj;
+        return (getName() != null) || !other.getName().equals(this.getName())
+                && this.getAge() == other.getAge() && this.getSalary() == other.getSalary();
+    }
+
+    @Override
+    public String toString() {
+        return "Emploee{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", salary=" + salary +
+                '}';
+    }
 }
