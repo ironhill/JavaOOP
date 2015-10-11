@@ -1,5 +1,7 @@
 package week3.day1;
 
+import week3.Coder;
+
 /**
  * Created by Ihor Samanchuk on 04.10.2015.
  */
